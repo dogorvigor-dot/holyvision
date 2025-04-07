@@ -1,10 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative, Autoplay, Lazy } from "swiper/modules";
+import { EffectCreative, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-creative";
-import "swiper/css/autoplay"; // ✅ Still valid
-// ❌ Don't import "swiper/css/lazy" – it's not needed in newer versions
+import "swiper/css/autoplay";
 
 // 🖼️ Gallery Images (replace with your actual image paths)
 import img1 from "../assets/syringe.jpg";
@@ -25,9 +24,8 @@ const GallerySlider = () => {
 
       <div className="max-w-6xl mx-auto">
         <Swiper
-          modules={[EffectCreative, Autoplay, Lazy]}
+          modules={[EffectCreative, Autoplay]}
           effect="creative"
-          lazy={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -55,11 +53,10 @@ const GallerySlider = () => {
           {images.map((img, index) => (
             <SwiperSlide key={index}>
               <img
-                data-src={img}
-                className="swiper-lazy rounded-lg w-full h-64 object-cover shadow-xl border-4 border-white hover:scale-105 transition-transform duration-700 ease-in-out"
+                src={img}
+                className="rounded-lg w-full h-64 object-cover shadow-xl border-4 border-white hover:scale-105 transition-transform duration-700 ease-in-out"
                 alt={`Gallery ${index + 1}`}
               />
-              <div className="swiper-lazy-preloader"></div>
             </SwiperSlide>
           ))}
         </Swiper>
