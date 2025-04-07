@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import aawazLogo from '../assets/logo.PNG';
+import aawazLogo from '../assets/logo.png';
 import facebookImg from '../assets/facebook.png';
 import googleImg from '../assets/googlemap.png';
 import whatsappImg from '../assets/whatsapp.png';
