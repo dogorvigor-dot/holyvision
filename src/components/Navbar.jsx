@@ -205,7 +205,7 @@ const Navbar = () => {
               <img
                 src={logo1}
                 alt="Intandem Scholars Sidebar Logo"
-                className="h-[130px] object-contain zoom-effect "
+                className="h-[100px] object-contain zoom-effect "
               />
             </div>
             <Link
