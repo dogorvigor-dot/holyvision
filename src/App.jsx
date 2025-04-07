@@ -11,6 +11,7 @@ import About from './pages/About';
 
 import PclGeneralMedicinePage from './pages/GeneralMedicine';
 import PclNursingPage from './pages/PCLNursing';
+import DiplomaInPharmacyPage from './pages/DiplomaPharmacy';
 
 
 
@@ -27,9 +28,11 @@ const App = () => {
           <Route path="/holyvision" element={<Home />} />
           <Route path="/pcl-in-general-medicine" element={<PclGeneralMedicinePage />} />
           <Route path="/pcl-in-nursing" element={<PclNursingPage />} />
+          <Route path="/diploma-in-pharmacy" element={<DiplomaInPharmacyPage />} />
          
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          {/* <Route path="/gallery" element={<Gallery />} /> */}
          
         
         

@@ -11,6 +11,7 @@ import Reviews from '../components/Reviews';
 import DirectContactUs from '../components/DirectContact';
 import StaffInfo from '../components/StaffInfo';
 import CourseDetails from '../components/CourseDetails';
+import FAQComponent from '../components/FAQs';
 
 
 
@@ -32,6 +33,7 @@ const Home = () => {
         <ServicesComponent/>
        
         <Contact />
+        <FAQComponent/>
        
         <Reviews/>
         <Footer/>
