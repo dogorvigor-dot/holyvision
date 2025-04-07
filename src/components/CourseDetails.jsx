@@ -46,7 +46,7 @@ const CourseDetails = () => {
     {
       image: canadaImage,
       flag: canadaFlag,
-      title: "Diploma in Pharmacy ",
+      title: "Diploma In Pharmacy ",
       description:
         "Kickstart your pharmacy career with D. Pharm at HVTC — a future-ready program combining clinical skills, pharmaceutical science, and industry exposure to shape confident, competent healthcare professionals.",
       link: "diploma-in-pharmacy",

@@ -5,20 +5,16 @@ import { Autoplay } from "swiper/modules";
 
 // Import all consultancy-related images
 import consultancy1 from "../assets/jj.jpg";
-import consultancy2 from "../assets/cd.jpg";
-import consultancy3 from "../assets/ef.jpg";
-import consultancy4 from "../assets/gh.jpg";
-import consultancy5 from "../assets/ij.jpg";
-import consultancy6 from "../assets/can.jpg";
+import consultancy2 from "../assets/abt.jpg";
+import consultancy3 from "../assets/dj.jpg";
+
 
 // Define the images in an array
 const images = [
   { src: consultancy1, alt: "1" },
   { src: consultancy2, alt: "2" },
   { src: consultancy3, alt: "3" },
-  { src: consultancy4, alt: "4" },
-  { src: consultancy5, alt: "5" },
-  { src: consultancy6, alt: "6" },
+  
 ];
 
 export default function VisaConsultancySlider() {
@@ -66,23 +62,69 @@ export default function VisaConsultancySlider() {
         ))}
       </Swiper>
       {/* Optional Inline CSS for Loader Animation */}
-      <style>
-        {`
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-          .animate-pulse {
-            background: linear-gradient(90deg, rgba(200, 200, 200, 0.2) 25%, rgba(240, 240, 240, 0.4) 50%, rgba(200, 200, 200, 0.2) 75%);
-            background-size: 400% 100%;
-            animation: fadeIn 1.5s infinite linear;
-          }
-        `}
-      </style>
+      <style>{`
+  /* Fade In - Smooth and Soothing */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide Down - Fluid Entry */
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Zoom In - Gentle Pop */
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.92);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  .animate-slideDown {
+    animation: slideDown 1.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  .animate-zoomIn {
+    animation: zoomIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+
+  /* Optional: Slight delay support */
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  .delay-700 {
+    animation-delay: 0.7s;
+  }
+  .delay-900 {
+    animation-delay: 0.9s;
+  }
+`}</style>
     </div>
   );
 }

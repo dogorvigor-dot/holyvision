@@ -12,6 +12,9 @@ import DirectContactUs from '../components/DirectContact';
 import StaffInfo from '../components/StaffInfo';
 import CourseDetails from '../components/CourseDetails';
 import FAQComponent from '../components/FAQs';
+import ContactusComponent from '../components/ContactusComponent';
+import AboutIntandem from '../components/AboutComponent';
+import GallerySlider from '../components/GallerySlider';
 
 
 
@@ -28,12 +31,14 @@ const Home = () => {
         <VisaConsultancySlider/>
         <InfoCards/>
      <CourseDetails/>
+     <AboutIntandem/>
         <StaffInfo/>
         <DirectContactUs/>
         <ServicesComponent/>
-       
+    <ContactusComponent/>
         <Contact />
         <FAQComponent/>
+        <GallerySlider/>
        
         <Reviews/>
         <Footer/>
