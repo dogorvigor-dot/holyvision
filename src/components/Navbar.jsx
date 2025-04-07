@@ -175,7 +175,7 @@ const Navbar = () => {
           ))}
          <div className="flex gap-2">
   <a
-    href="https://www.facebook.com/share/1A6FSDCwy8/?mibextid=LQQJ4d"
+    href="https://www.facebook.com/share/1DvKTYh2j5/?mibextid=wwXIfr"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -183,7 +183,7 @@ const Navbar = () => {
     <img src={img1} alt="Facebook" className="h-[40px] w-[40px] object-contain" />
   </a>
   <a
-    href="https://www.google.com/maps/dir//Intandem+Scholars,+Battisputali+Marg,+Kathmandu+44600/@27.7020787,85.3406429,17z"
+    href="https://www.google.com/maps/place/Holy+Vision+Technical+Campus/@27.6907731,85.3335731,17.75z/data=!4m6!3m5!1s0x39eb19957c935b35:0x75b06ec216c597d5!8m2!3d27.691029!4d85.3336338!16s%2Fg%2F11b6gdw10d?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -191,7 +191,7 @@ const Navbar = () => {
     <img src={img2} alt="Google Maps" className="h-[40px] w-[40px] object-contain" />
   </a>
   <a
-    href="https://wa.me/9801025694"
+    href="https://wa.me/+9779801125262"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -199,7 +199,7 @@ const Navbar = () => {
     <img src={img3} alt="WhatsApp" className="h-[40px] w-[40px] object-contain" />
   </a>
   <a
-    href="https://www.linkedin.com/company/intandemscholars/?originalSubdomain=np"
+    href="https://www.linkedin.com/"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -266,7 +266,7 @@ const Navbar = () => {
             ))}
            <div className="flex justify-center gap-2 mt-4 px-6">
   <a
-    href="https://www.facebook.com/share/1A6FSDCwy8/?mibextid=LQQJ4d"
+    href="https://www.facebook.com/share/1DvKTYh2j5/?mibextid=wwXIfr"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -274,7 +274,7 @@ const Navbar = () => {
     <img src={img1} alt="Facebook" className="h-[40px] w-[40px] object-contain" />
   </a>
   <a
-    href="https://www.google.com/maps/dir//Intandem+Scholars,+Battisputali+Marg,+Kathmandu+44600/@27.7020787,85.3406429,17z"
+    href="https://www.google.com/maps/place/Holy+Vision+Technical+Campus/@27.6907731,85.3335731,17.75z/data=!4m6!3m5!1s0x39eb19957c935b35:0x75b06ec216c597d5!8m2!3d27.691029!4d85.3336338!16s%2Fg%2F11b6gdw10d?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -282,7 +282,7 @@ const Navbar = () => {
     <img src={img2} alt="Google Maps" className="h-[40px] w-[40px] object-contain" />
   </a>
   <a
-    href="https://wa.me/+9779801025694"
+    href="https://wa.me/+9779801125262"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
@@ -290,7 +290,7 @@ const Navbar = () => {
     <img src={img3} alt="WhatsApp" className="h-[40px] w-[40px] object-contain" />
   </a>
   <a
-    href="https://www.linkedin.com/company/intandemscholars/?originalSubdomain=np"
+    href="https://www.linkedin.com/"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
