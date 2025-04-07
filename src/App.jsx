@@ -12,6 +12,7 @@ import About from './pages/About';
 import PclGeneralMedicinePage from './pages/GeneralMedicine';
 import PclNursingPage from './pages/PCLNursing';
 import DiplomaInPharmacyPage from './pages/DiplomaPharmacy';
+import Gallery from './pages/Gallery';
 
 
 
