@@ -14,7 +14,7 @@ import CourseDetails from '../components/CourseDetails';
 import FAQComponent from '../components/FAQs';
 import ContactusComponent from '../components/ContactusComponent';
 import AboutIntandem from '../components/AboutComponent';
-import GallerySlider from '../components/GallerySlider';
+// import GallerySlider from '../components/GallerySlider';
 
 
 
@@ -38,7 +38,7 @@ const Home = () => {
     <ContactusComponent/>
         <Contact />
         <FAQComponent/>
-        <GallerySlider/>
+        {/* <GallerySlider/> */}
        
         <Reviews/>
         <Footer/>
