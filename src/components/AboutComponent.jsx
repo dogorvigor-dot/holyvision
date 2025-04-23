@@ -84,15 +84,15 @@ const AboutIntandem = () => {
               },
               {
                 content:
-                  "The establishment of Holy Vision Technical Campus has been inspired by twin objectives of producing the middle level health professionals and preparing them for employment on completion of their education and training. The graduates of this campus will be able to provide quality health care to mainly rural population in all preventive, promotive, curative, drug management and rehabilitative aspects.",
+                  "Holy Vision Technical Campus (HVTC) was founded with a mission to produce skilled middle-level health professionals ready for immediate employment, especially in rural areas. The institution emphasizes comprehensive healthcare training—covering preventive, promotive, curative, managerial, and rehabilitative care. Over the years, HVTC has maintained a strong track record of academic excellence, with many graduates achieving distinction and first division marks, going on to serve in both local and international healthcare settings.",
               },
               {
                 content:
-                  "Among these three programs—PCL in Nursing, General Medicine, and Diploma in Pharmacy—Nursing was initiated in 2002 followed by General Medicine in 2003 and Pharmacy in 2004. Many students have graduated with distinction and first division marks.",
+                  "HVTC offers a range of CTEVT-affiliated and nationally recognized programs, including the Proficiency Certificate Level in Nursing (since 2002), General Medicine (Health Assistant, since 2003), Diploma in Pharmacy (since 2004), and the newly launched Caregiver Program. These programs are approved by regulatory bodies such as the Nepal Nursing Council, Nepal Health Professional Council, and Nepal Pharmacy Council, and are recognized by Tribhuvan University. The institution takes pride in its experienced faculty, strong pass rates, hands-on practical training, and career-focused education designed to meet the growing needs of the healthcare sector.",
               },
               {
                 content:
-                  "These 3-year academic programs are offered under CTEVT curricula and are recognized by Tribhuvan University, Nepal Nursing Council, Nepal Health Professional Council, and Nepal Pharmacy Council. Join us and build your future with quality technical education and hands-on healthcare training.",
+                  "To support inclusive education and academic excellence, HVTC offers scholarships to deserving students. Three scholarships are awarded annually to students from Category 3, as designated by CTEVT, to promote diversity and support underrepresented backgrounds. Additionally, a merit-based scholarship is granted each year to recognize outstanding academic performance. Through these initiatives, HVTC reinforces its commitment to accessible, high-quality healthcare education and the development of compassionate, competent professionals.",
               },
             ].map((item, i) =>
               item.tag === "h2" ? (

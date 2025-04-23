@@ -4,8 +4,8 @@ import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 
 import { MdOutlineClose } from 'react-icons/md';
 import { FiAlignJustify } from "react-icons/fi";
-import logo from '../assets/logo.png'; // Main logo
-import logo1 from '../assets/logo.png'; // Sidebar logo
+import logo from '../assets/finallogo.jpeg'; // Main logo
+import logo1 from '../assets/finallogo.jpeg'; // Sidebar logo
 import img1 from '../assets/facebook.png';
 import img2 from '../assets/googlemap.png';
 import img3 from '../assets/whatsapp.png';

@@ -59,6 +59,14 @@ const CourseDetails = () => {
       "Begin your journey in healthcare with PCL in Nursing at HVTC — a comprehensive program blending compassionate care, clinical expertise, and real-world training to nurture skilled and empathetic nursing professionals.",
       link: "/pcl-in-nursing",
     },
+    {
+      image: usaImage,
+      flag: usaFlag,
+      title: "Caregiver Program",
+      description:
+      "Step into the world of caregiving with HVTC’s Caregiver Program — designed to equip you with the skills, compassion, and global readiness needed to support the elderly and vulnerable with dignity, respect, and professional care.",
+      link: "/caregiver-program",
+    },
     
   
   ];

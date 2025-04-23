@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import logo from "../assets/logo.png";
+import logo from "../assets/finallogo2.png";
 import bgImage from "../assets/background.jpg"; // Make sure the image exists
 
 const Footer = () => {
