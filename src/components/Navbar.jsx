@@ -108,7 +108,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex items-center  ">
-          <img src={logo} alt="Intandem Scholars Logo" className="w-[100px]  md:w-[130px] " />
+          <img src={logo} alt="HolyVision Logo" className="w-[100px]  md:w-[130px] " />
           
         </div>
 
