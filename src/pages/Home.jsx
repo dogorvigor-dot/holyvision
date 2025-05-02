@@ -15,6 +15,8 @@ import FAQComponent from '../components/FAQs';
 import ContactusComponent from '../components/ContactusComponent';
 import AboutIntandem from '../components/AboutComponent';
 import GallerySlider from '../components/GallerySlider';
+import Achievements from "../components/Achievements";
+import AchievementSection from "../components/Achievements";
 
 
 
@@ -43,6 +45,7 @@ const Home = () => {
      
     <ContactusComponent/>
         <Contact />
+        <AchievementSection/>
         <FAQComponent/>
         <GallerySlider/>
        
