@@ -33,7 +33,7 @@ const ServicesSection = () => {
           </p>
           <ul className="space-y-4">
             {[
-              "Diverse Technical Programs: Including Nursing, General Medicine, Pharmacy, and more.",
+              "Diverse Technical Programs: Including Nursing, General Medicine, Pharmacy, and Caregiver Program.",
               "Modern Infrastructure: Labs, libraries, simulation rooms, and digital resources.",
               "Experienced Faculty: Qualified instructors with clinical and industrial expertise.",
               "Internship Opportunities: Placements in hospitals, health centers, and pharmacies.",
