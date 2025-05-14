@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import campusImage from "../assets/555.jpeg";
 import PrincipalMessage from "../components/PricipalMessage";
+import NavbarMain from "../components/NavbarMain";
 
 // Container animation
 const containerVariants = {
@@ -45,7 +46,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <Navbar />
+      <NavbarMain />
 
       <motion.div
         className="p-6 space-y-16 max-w-7xl mx-auto pt-[140px]"

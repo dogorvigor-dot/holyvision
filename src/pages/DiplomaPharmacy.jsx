@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ParticularDirectContactUs from "../components/ParticularDirectContactUs";
 import pharmacyImage from "../assets/pharmacy.jpg"; // Replace with actual image path
+import NavbarMain from "../components/NavbarMain";
 
 const DiplomaInPharmacyPage = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const DiplomaInPharmacyPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar />
+      <NavbarMain />
 
       {/* Hero Section */}
       <section

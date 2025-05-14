@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ParticularDirectContactUs from "../components/ParticularDirectContactUs";
 import nursingImage from "../assets/syringe.jpg"; // Replace with actual image path
+import NavbarMain from "../components/NavbarMain";
 
 const PclNursingPage = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const PclNursingPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar />
+      <NavbarMain />
 
       {/* Hero Section */}
       <section

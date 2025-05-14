@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ParticularDirectContactUs from "../components/ParticularDirectContactUs";
 import generalMedicineImage from "../assets/gm.jpg"; // Use correct image
+import NavbarMain from "../components/NavbarMain";
 
 const PclGeneralMedicinePage = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const PclGeneralMedicinePage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar />
+      <NavbarMain />
 
       {/* Hero Section */}
       <section

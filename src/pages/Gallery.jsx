@@ -35,11 +35,12 @@ import work3 from "../assets/work3.jpeg";
 import work4 from "../assets/work4.jpeg";
 
 import LOTCGallery from "../components/LOTCGallery";
+import NavbarMain from "../components/NavbarMain";
 
 const images = [
-  img11, img22, work3, work4, img44, img55, img88,
+  img11, img22, work3, img44, img55, img88,
   img111, img444, img555, img999, img2222, img3333, img5555, img6666, img9999,
-  img11111, img22222, img33333, img44444, img55555, img66666, img77777, img88888,
+  img11111, img22222, img33333, img44444, img66666, img77777, img88888,
 ];
 
 const GalleryPage = () => {
@@ -49,7 +50,7 @@ const GalleryPage = () => {
 
   return (
     <div>
-      <Navbar />
+      <NavbarMain />
       <section id="gallery" className="bg-gray-50 py-12 px-6 sm:px-12 pt-[140px]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-4xl font-bold text-[#034694] mb-6 text-center">
@@ -57,11 +58,14 @@ const GalleryPage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {images.map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-lg">
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg flex items-center justify-center h-64 overflow-hidden"
+              >
                 <img
                   src={image}
                   alt={`Gallery Image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                   decoding="async"
                 />

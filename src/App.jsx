@@ -2,17 +2,11 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'; // Add this for styling
 import whatsappImage from './assets/whatsapp.png'; // Import WhatsApp image
-
 import Home from './pages/Home';
-
-
 import About from './pages/About';
-
-
 import PclGeneralMedicinePage from './pages/GeneralMedicine';
 import PclNursingPage from './pages/PCLNursing';
 import DiplomaInPharmacyPage from './pages/DiplomaPharmacy';
-
 import GalleryContent from './pages/Gallery';
 import ContactPage from './pages/ContactPage';
 import CaregiverProgramPage from './pages/Caregiver';
