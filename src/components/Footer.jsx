@@ -77,11 +77,11 @@ const Footer = () => {
               <li className="flex flex-col sm:flex-row sm:items-center gap-2">
                 <FaPhoneAlt className="text-lg text-green-300" />
                 <div className="flex flex-col">
-                  <a href="tel:+01-5244745" className="hover:text-green-300 transition-all duration-300">
-                  01-5244745
+                  <a href="tel:+9779851177317" className="hover:text-green-300 transition-all duration-300">
+                 +977 9851177317
                   </a>
-                  <a href="tel:01-4793874" className="hover:text-green-300 transition-all duration-300">
-                  01-4793874
+                  <a href="tel:+9779841847787" className="hover:text-green-300 transition-all duration-300">
+                +977 9841847787
                   </a>
                 </div>
               </li>
@@ -105,10 +105,7 @@ const Footer = () => {
       {/* Bottom Copyright */}
       <div className="relative z-10 bg-gray-800 bg-opacity-80 text-center py-4">
         <p className="text-sm">
-          © {new Date().getFullYear()} Holy Vision Technical Campus. All Rights Reserved. Designed by{" "}
-          <span className="font-bold hover:text-green-300 transition-all duration-300">
-            Clouds Nepal Web
-          </span>.
+          © {new Date().getFullYear()} Holy Vision Technical Campus. All Rights Reserved. 
         </p>
       </div>
     </footer>
