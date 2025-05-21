@@ -21,7 +21,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 py-16 px-6">
+    <div className="bg-gray-50 py-8 px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Text Section */}
         <div className="lg:w-1/2 fade-in opacity-0 transition-all duration-1000 ease-in-out">

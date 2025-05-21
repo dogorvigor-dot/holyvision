@@ -63,7 +63,7 @@ const ContactusComponent = () => {
           </p>
         </div>
 
-        <div ref={mapRef} className="text-center mt-8">
+        <div ref={mapRef} className="text-center mt-4">
           <a href={mapImageUrl} target="_blank" rel="noopener noreferrer">
             <img
               src={aawazlocation}

@@ -34,7 +34,7 @@ const Contact = () => {
   }, [refs]);
 
   return (
-    <div className="flex flex-col items-center justify-center py-10 bg-gray-100">
+    <div className="flex flex-col items-center justify-center py-8 bg-gray-100">
       <h2 className="text-3xl font-bold text-center text-blue-900 mb-4">
         Contact Us
       </h2>

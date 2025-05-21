@@ -13,9 +13,9 @@ import img1 from "../assets/facebook.png";
 import img2 from "../assets/googlemap.png";
 import img3 from "../assets/whatsapp.png";
 
-import slide2 from "../assets/55555.jpeg";
-import slide3 from "../assets/work1.jpeg";
-import slide4 from "../assets/work4.jpeg";
+import slide2 from "../assets/55555.webp";
+import slide3 from "../assets/work1.webp";
+import slide4 from "../assets/work4.webp";
 
 const abroad = [
   { path: "/pcl-in-general-medicine", label: "PCL In General Medicine (HA)" },

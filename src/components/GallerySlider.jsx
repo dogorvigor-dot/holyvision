@@ -18,7 +18,7 @@ const GallerySlider = () => {
   const images = [img1, img2, img3, img4, img5, img6, img7];
 
   return (
-    <section className="w-full py-16 px-4 sm:px-6 bg-white relative">
+    <section className="w-full py-8 px-4 sm:px-6 bg-white relative">
       {/* 💅 Shadow override injected directly */}
       <style>
         {`

@@ -69,7 +69,7 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section className="bg-blue-50 py-18 px-4">
+    <section className="bg-blue-50 py-10 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-900 mb-9">
           What Students Say About HVTC
