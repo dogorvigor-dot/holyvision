@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 
 import img11 from "../assets/11.jpeg";
@@ -8,26 +8,24 @@ import img44 from "../assets/44.jpeg";
 import img55 from "../assets/55.jpeg";
 import img88 from "../assets/88.jpeg";
 import img111 from "../assets/111.jpeg";
-import img333 from "../assets/333.jpeg";
+
 import img444 from "../assets/444.jpeg";
 import img555 from "../assets/555.jpeg";
-import img666 from "../assets/666.jpeg";
-import img777 from "../assets/777.jpeg";
-import img888 from "../assets/888.jpeg";
+
 import img999 from "../assets/999.jpeg";
-import img1111 from "../assets/1111.jpeg";
+
 import img2222 from "../assets/2222.jpeg";
 import img3333 from "../assets/3333.jpeg";
-import img4444 from "../assets/4444.jpeg";
+
 import img5555 from "../assets/5555.jpeg";
 import img6666 from "../assets/6666.jpeg";
-import img7777 from "../assets/7777.jpeg";
+
 import img9999 from "../assets/9999.jpeg";
 import img11111 from "../assets/11111.jpeg";
 import img22222 from "../assets/22222.jpeg";
 import img33333 from "../assets/33333.jpeg";
 import img44444 from "../assets/44444.jpeg";
-import img55555 from "../assets/55555.jpeg";
+
 import img66666 from "../assets/66666.jpeg";
 import img77777 from "../assets/77777.jpeg";
 import img88888 from "../assets/88888.jpeg";
