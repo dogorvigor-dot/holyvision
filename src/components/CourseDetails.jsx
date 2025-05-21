@@ -68,7 +68,7 @@ const CourseDetails = () => {
   ];
 
   return (
-    <div className="bg-gray-100 py-16 px-4 scroll-smooth">
+    <div className="bg-gray-100 py-8 px-4 scroll-smooth">
       {/* Page Title */}
       <div className="text-center mb-10">
       <h2 className="text-4xl font-bold animate-fadeIn text-center">

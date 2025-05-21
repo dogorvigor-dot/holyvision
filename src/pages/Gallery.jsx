@@ -32,7 +32,9 @@ import img66666 from "../assets/66666.jpeg";
 import img77777 from "../assets/77777.jpeg";
 import img88888 from "../assets/88888.jpeg";
 import work3 from "../assets/work3.jpeg";
-import work4 from "../assets/work4.jpeg";
+
+import work6 from "../assets/34.jpeg";
+
 
 import LOTCGallery from "../components/LOTCGallery";
 import NavbarMain from "../components/NavbarMain";
@@ -40,7 +42,7 @@ import NavbarMain from "../components/NavbarMain";
 const images = [
   img11, img22, work3, img44, img55, img88,
   img111, img444, img555, img999, img2222, img3333, img5555, img6666, img9999,
-  img11111, img22222, img33333, img44444, img66666, img77777, img88888,
+  img11111, img22222, img33333, img44444, img66666, img77777, img88888,work6
 ];
 
 const GalleryPage = () => {
