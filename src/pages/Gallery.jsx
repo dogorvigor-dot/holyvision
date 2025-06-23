@@ -32,6 +32,22 @@ import img88888 from "../assets/88888.jpeg";
 import work3 from "../assets/work3.jpeg";
 
 import work6 from "../assets/34.jpeg";
+import np1 from "../assets/np1.jpeg";
+import np2 from "../assets/np2.jpeg";
+import np3 from "../assets/np3.jpeg";
+import np4 from "../assets/np4.jpeg";
+import np5 from "../assets/np5.jpeg";
+import np6 from "../assets/np6.jpeg";
+import np7 from "../assets/np7.jpeg";
+
+import np9 from "../assets/np9.jpeg";
+import np10 from "../assets/np10.jpeg";
+import np11 from "../assets/np11.jpeg";
+import np12 from "../assets/np12.jpeg";
+import np13 from "../assets/np13.jpeg";
+import np14 from "../assets/np14.jpeg";
+import np15 from "../assets/np15.jpeg";
+
 
 
 import LOTCGallery from "../components/LOTCGallery";
@@ -40,7 +56,9 @@ import NavbarMain from "../components/NavbarMain";
 const images = [
   img11, img22, work3, img44, img55, img88,
   img111, img444, img555, img999, img2222, img3333, img5555, img6666, img9999,
-  img11111, img22222, img33333, img44444, img66666, img77777, img88888,work6
+  img11111, img22222, img33333, img44444, img66666, img77777, img88888,work6,np1, np2, np3, np4, np5,
+  np6, np7,  np9, np10,
+  np11, np12, np13, np14, np15,
 ];
 
 const GalleryPage = () => {
