@@ -22,6 +22,7 @@ const abroad = [
   { path: "/diploma-in-pharmacy", label: "Diploma In Pharmacy" },
   { path: "/pcl-in-nursing", label: "PCL IN NURSING" },
   { path: "/caregiver-program", label: "Caregiver Program" },
+  { path: "/scholarship", label: "Scholarship" },
 ];
 
 const navLinks = [

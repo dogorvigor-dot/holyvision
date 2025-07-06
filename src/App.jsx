@@ -10,6 +10,7 @@ import DiplomaInPharmacyPage from './pages/DiplomaPharmacy';
 import GalleryContent from './pages/Gallery';
 import ContactPage from './pages/ContactPage';
 import CaregiverProgramPage from './pages/Caregiver';
+import Scholarship from './pages/Scholarship';
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/contact" element={<ContactPage/>} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<GalleryContent />} /> 
+          <Route path="/scholarship" element={<Scholarship />} /> 
          
         
         
