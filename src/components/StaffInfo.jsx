@@ -4,11 +4,11 @@ const BoardOfDirectors = () => {
   const directors = [
     {
       name: "Mr. Dipak Chandra Baral",
-      role: `Admin. Chief, Everest Hospital\nChairman, NIMS`,
+      role: `Chairman\nAdmin. Chief, Everest Hospital\nChairman, NIMS`,
     },
     {
       name: "Asso. Prof. Dr. Tulsi Das Shrestha, T.U.",
-      role: `Board Member of Everest Hospital\nExecutive Director\nGeneral Secretary, NHAN`,
+      role: `Executive Director\nBoard Member of Everest Hospital\nGeneral Secretary, UNAN`,
     },
     {
       name: "Dr. Soni Mahato",
@@ -16,18 +16,18 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Dr. Moni Mahto",
-      role: `Director\nSenior Micro Biologist\nConsultant, Everest Hospital\nBoard Member of Social Welfare Council`,
+      role: `Director\nConsultant Micro Biologist\nInterprete Nepal\nBoard Member of \nEverest Hospital`,
     },
     {
       name: "Dr. Sumitra Nakarmi",
-      role: `Director\nBoard Member of Everest Hospital\nSocial Welfare Council`,
+      role: `Director\nMember of\nSocial Welfare Council`,
     },
     {
       name: "Mrs. Amrita Mahaseth",
-      role: `Director\nBoard Member of Everest Hospital`,
+      role: `Director\nBoard Member of\nEverest Hospital`,
     },
     {
-      name: "Mrs. Urmila Bhattrai Baral",
+      name: "Mrs. Urmila Bhattarai Baral",
       role: `Director`,
     },
   ];
