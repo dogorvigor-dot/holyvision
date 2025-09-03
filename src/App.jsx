@@ -11,6 +11,7 @@ import GalleryContent from './pages/Gallery';
 import ContactPage from './pages/ContactPage';
 import CaregiverProgramPage from './pages/Caregiver';
 import Scholarship from './pages/Scholarship';
+import Notice from './pages/Notice';
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<GalleryContent />} /> 
           <Route path="/scholarship" element={<Scholarship />} /> 
+          <Route path="/notice" element={<Notice />} /> 
          
         
         

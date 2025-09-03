@@ -28,6 +28,7 @@ const abroad = [
 const navLinks = [
   { path: "/contact", label: "CONTACT US" },
   { path: "/gallery", label: "GALLERY" },
+  { path: "/notice", label: "NOTICE" },
 ];
 
 const images = [slide2, slide3, slide4];
