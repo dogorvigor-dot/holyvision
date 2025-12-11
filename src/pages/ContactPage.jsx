@@ -32,10 +32,10 @@ const ContactPage = () => {
     <>
       <NavbarMain />
       <div className="pt-[120px] mb-7">
-        <ContactusComponent />
+        <DirectContactUs />
       </div>
-      <DirectContactUs />
       <Contact />
+        <ContactusComponent />
       <Footer />
     </>
   );

@@ -90,7 +90,7 @@ const Navbar = () => {
           <a href="https://maps.google.com" target="_blank" rel="noreferrer">
             <img src={img2} alt="Map" className="h-6 w-6" />
           </a>
-          <a href="https://wa.me/+9779801125262" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/+9779851380074" target="_blank" rel="noreferrer">
             <img src={img3} alt="WhatsApp" className="h-6 w-6" />
           </a>
         </div>

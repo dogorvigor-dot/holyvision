@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <img src={logo} alt="Logo" className="h-[100px] w-[120px]" />
             </div>
-           
+
           </div>
 
           {/* Our Courses */}
@@ -44,6 +44,12 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <Link
+                to="/apply"
+                className="inline-block mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all duration-300"
+              >
+                Apply Now
+              </Link>
             </ul>
           </div>
 
@@ -77,18 +83,18 @@ const Footer = () => {
               <li className="flex flex-col sm:flex-row sm:items-center gap-2">
                 <FaPhoneAlt className="text-lg text-green-300" />
                 <div className="flex flex-col">
-                  <a href="tel:+9779851177317" className="hover:text-green-300 transition-all duration-300">
-                 +977 9851177317
+                  <a href="tel:+9779851380073" className="hover:text-green-300 transition-all duration-300">
+                    +977 9851380073
                   </a>
-                  <a href="tel:+9779841847787" className="hover:text-green-300 transition-all duration-300">
-                +977 9841847787
+                  <a href="tel:+9779743939016" className="hover:text-green-300 transition-all duration-300">
+                    +977 9743939016
                   </a>
                 </div>
               </li>
               <li className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-lg text-green-300" />
                 <span className="hover:text-green-300 transition-all duration-300">
-                Thapagaun, New Baneshower Kathmandu Nepal
+                  Thapagaun, New Baneshower Kathmandu Nepal
                 </span>
               </li>
             </ul>
@@ -105,7 +111,7 @@ const Footer = () => {
       {/* Bottom Copyright */}
       <div className="relative z-10 bg-gray-800 bg-opacity-80 text-center py-4">
         <p className="text-sm">
-          © {new Date().getFullYear()} Holy Vision Technical Campus. All Rights Reserved. 
+          © {new Date().getFullYear()} Holy Vision Technical Campus. All Rights Reserved.
         </p>
       </div>
     </footer>

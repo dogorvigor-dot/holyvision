@@ -1,26 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import NavbarMain from "../components/NavbarMain";
 import Footer from "../components/Footer";
+
 import img11 from "../assets/11.jpeg";
 import img22 from "../assets/22.jpeg";
 import img44 from "../assets/44.jpeg";
 import img55 from "../assets/55.jpeg";
 import img88 from "../assets/88.jpeg";
 import img111 from "../assets/111.jpeg";
-import img444 from "../assets/444.jpeg";
-import img555 from "../assets/555.jpeg";
-import img999 from "../assets/999.jpeg";
-import img2222 from "../assets/2222.jpeg";
 import img3333 from "../assets/3333.jpeg";
-import img5555 from "../assets/5555.jpeg";
-import img6666 from "../assets/6666.jpeg";
-import img9999 from "../assets/9999.jpeg";
-import img11111 from "../assets/11111.jpeg";
-import img22222 from "../assets/22222.jpeg";
-import img33333 from "../assets/33333.jpeg";
-import img44444 from "../assets/44444.jpeg";
-import img66666 from "../assets/66666.jpeg";
-import img77777 from "../assets/77777.jpeg";
-import img88888 from "../assets/88888.jpeg";
 import work3 from "../assets/work3.jpeg";
 import work6 from "../assets/34.jpeg";
 import np1 from "../assets/np1.jpeg";
@@ -30,77 +18,311 @@ import np4 from "../assets/np4.jpeg";
 import np5 from "../assets/np5.jpeg";
 import np6 from "../assets/np6.jpeg";
 import np7 from "../assets/np7.jpeg";
-import np9 from "../assets/np9.jpeg";
-import np10 from "../assets/np10.jpeg";
-import np11 from "../assets/np11.jpeg";
-import np12 from "../assets/np12.jpeg";
-import np13 from "../assets/np13.jpeg";
-import np14 from "../assets/np14.jpeg";
-import np15 from "../assets/np15.jpeg";
-import LOTCGallery from "../components/LOTCGallery";
-import NavbarMain from "../components/NavbarMain";
+import festival1 from "../assets/444.jpeg";
+import festival2 from "../assets/22222.jpeg";
+import festival3 from "../assets/6666.jpeg";
 
-const images = [
-  img11, img22, work3, img44, img55, img88,
-  img111, img444, img555, img999, img2222, img3333, img5555, img6666, img9999,
-  img11111, img22222, img33333, img44444, img66666, img77777, img88888,
-  work6, np1, np2, np3, np4, np5, np6, np7, np9, np10, np11, np12, np13, np14, np15,
+const CATEGORIES = [
+  { id: "sports", title: "Sports Activities", thumb: img11 },
+  { id: "labs", title: "Practical Labs", thumb: work3 },
+  { id: "community", title: "Community & Learning", thumb: np1 },
+  { id: "welcome", title: "Welcome & Farewell", thumb: img3333 },
+  { id: "festival", title: "Festival", thumb: festival1 },
 ];
 
-const GalleryPage = () => {
+const MEDIA_POOL = {
+  sports: [img11, img22, img88, img111, img44].map((s, i) => ({
+    id: `s-${i}`,
+    src: s,
+    type: "image",
+    tags: ["sports"],
+  })),
+  labs: [work3, work6, img55, img44].map((s, i) => ({
+    id: `l-${i}`,
+    src: s,
+    type: "image",
+    tags: ["labs"],
+  })),
+  community: [np1, np2, np3, np4, np5, np6, np7].map((s, i) => ({
+    id: `c-${i}`,
+    src: s,
+    type: "image",
+    tags: ["community"],
+  })),
+  welcome: [img3333, img55, img88].map((s, i) => ({
+    id: `w-${i}`,
+    src: s,
+    type: "image",
+    tags: ["welcome"],
+  })),
+  festival: [festival1, festival2, festival3].map((s, i) => ({
+    id: `f-${i}`,
+    src: s,
+    type: "image",
+    tags: ["festival"],
+  })),
+};
+
+const allMedia = Object.values(MEDIA_POOL).flat();
+
+const ComplexGalleryPage = () => {
+  const [activeCat, setActiveCat] = useState(null);
+  const [viewAll, setViewAll] = useState(false);
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [items, setItems] = useState([]);
+  const [idx, setIdx] = useState(0);
+  const [zoom, setZoom] = useState(1);
+  const [rotate, setRotate] = useState(0);
+  const [autoplay, setAutoplay] = useState(false);
+  const autoplayRef = useRef(null);
+  const modalRef = useRef(null);
+  const [likes, setLikes] = useState({});
+
   useEffect(() => {
+    if (autoplay && modalOpen) {
+      autoplayRef.current = setInterval(() => {
+        setIdx((i) => (i + 1) % items.length);
+        setZoom(1);
+        setRotate(0);
+      }, 3000);
+    }
+    return () => clearInterval(autoplayRef.current);
+  }, [autoplay, modalOpen, items.length]);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (!modalOpen) return;
+      if (e.key === "ArrowRight") setIdx((i) => (i + 1) % items.length);
+      if (e.key === "ArrowLeft") setIdx((i) => (i - 1 + items.length) % items.length);
+      if (e.key === "Escape") setModalOpen(false);
+      if (e.key === "+") setZoom((z) => Math.min(3, z + 0.2));
+      if (e.key === "-") setZoom((z) => Math.max(1, z - 0.2));
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [modalOpen, items.length]);
+
+  const openCategory = (catId) => {
+    setActiveCat(catId);
+    setViewAll(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-    // SEO Meta Tags
-    const head = document.head;
+  const openModal = (list, startIndex = 0) => {
+    setItems(list);
+    setIdx(startIndex);
+    setZoom(1);
+    setRotate(0);
+    setModalOpen(true);
+  };
 
-    const title = document.createElement("title");
-    title.innerText = "Campus Gallery | Holy Vision Technical Campus – Student Life in Pictures";
-    head.appendChild(title);
+  const closeModal = () => {
+    setModalOpen(false);
+    setAutoplay(false);
+    clearInterval(autoplayRef.current);
+  };
 
-    const metaDesc = document.createElement("meta");
-    metaDesc.name = "description";
-    metaDesc.content =
-      "Explore the Holy Vision Technical Campus through our gallery – featuring moments of academic excellence, student life, infrastructure, labs, and events in Kathmandu.";
-    head.appendChild(metaDesc);
+  const toggleLike = (id) => setLikes((s) => ({ ...s, [id]: !s[id] }));
 
-    const metaKeywords = document.createElement("meta");
-    metaKeywords.name = "keywords";
-    metaKeywords.content =
-      "Holy Vision gallery, HVTC photo gallery, student life Kathmandu, Nursing college images Nepal, Health Assistant photos, Pharmacy college campus, CTEVT photo Kathmandu";
-    head.appendChild(metaKeywords);
-  }, []);
+  const download = (src, name = "download") => {
+    const a = document.createElement("a");
+    a.href = src;
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  };
+
+  const share = async (src) => {
+    try {
+      if (navigator.share) await navigator.share({ title: "Gallery item", url: src });
+      else navigator.clipboard.writeText(src) && alert("Link copied");
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  /** UPDATED FILTER (NO SEARCH TAG) **/
+  const filtered =
+    viewAll ? allMedia : activeCat ? MEDIA_POOL[activeCat] : [];
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50 text-gray-900">
       <NavbarMain />
-      <section id="gallery" className="bg-gray-50 py-12 px-6 sm:px-12 pt-[140px]">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-4xl font-bold text-[#034694] mb-6 text-center">
-            Holy Vision Campus Gallery
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {images.map((image, index) => (
+
+      <div className="pt-[120px] px-6 sm:px-12 pb-20 max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-3xl font-bold">Campus Gallery</h1>
+        </div>
+
+        {/* Categories */}
+        {!viewAll && !activeCat && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {CATEGORIES.map((c) => (
               <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg flex items-center justify-center h-64 overflow-hidden"
+                key={c.id}
+                onClick={() => openCategory(c.id)}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:-translate-y-2 hover:scale-105 cursor-pointer"
               >
-                <img
-                  src={image}
-                  alt={`Gallery Image ${index + 1}`}
-                  className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div className="relative h-56">
+                  <img src={c.thumb} className="w-full h-full object-cover" alt={c.title} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
+                    <div>
+                      <h3 className="text-xl text-white font-semibold">{c.title}</h3>
+                      <p className="text-sm text-white/80">Click to view photos</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+        )}
+
+        {(viewAll || activeCat) && (
+          <div className="mt-8 mb-6 flex items-center justify-between">
+            <h2 className="text-2xl font-semibold">
+              {viewAll ? "All Photos" : CATEGORIES.find((x) => x.id === activeCat).title}
+            </h2>
+
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => {
+                  setActiveCat(null);
+                  setViewAll(false);
+                }}
+                className="text-sm text-red-600"
+              >
+                Back
+              </button>
+
+              <button onClick={() => setActiveCat(null)} className="text-sm">
+                Categories
+              </button>
+
+              <button onClick={() => setViewAll(true)} className="text-sm">
+                View All
+              </button>
+            </div>
+          </div>
+        )}
+
+        {(viewAll || activeCat) && (
+          <div className="gallery-masonry" style={{ columnCount: 1, columnGap: "1rem" }}>
+            <style>{`
+              @media(min-width:640px){ .gallery-masonry{ column-count:2 }}
+              @media(min-width:1024px){ .gallery-masonry{ column-count:3 }}
+              .gallery-item{ break-inside: avoid; margin-bottom:1rem; }
+            `}</style>
+
+            {filtered.map((m, i) => (
+              <div className="gallery-item" key={m.id + i}>
+                <div className="relative rounded-lg overflow-hidden shadow-md">
+                  {m.type === "image" && (
+                    <img
+                      src={m.src}
+                      loading="lazy"
+                      className="w-full rounded-lg object-cover cursor-pointer transform transition hover:scale-105"
+                      onClick={() => openModal(filtered, filtered.indexOf(m))}
+                    />
+                  )}
+
+                  <div className="p-3 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium">#{m.tags?.[0] || "photo"}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => toggleLike(m.id)}
+                        className={`px-2 py-1 rounded ${
+                          likes[m.id] ? "bg-red-100 text-red-600" : "bg-gray-100"
+                        }`}
+                      >
+                        ♥ {likes[m.id] ? 1 : 0}
+                      </button>
+
+                      <button
+                        onClick={() => download(m.src)}
+                        className="px-2 py-1 rounded bg-blue-600 text-white"
+                      >
+                        ⬇
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+          <div ref={modalRef} className="relative max-w-[90vw] max-h-[90vh] w-full">
+            <button
+              onClick={closeModal}
+              className="absolute right-4 top-4 text-white bg-white/10 px-3 py-1 rounded"
+            >
+              ✕
+            </button>
+
+            <button
+              onClick={() => setIdx((i) => (i - 1 + items.length) % items.length)}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl"
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={() => setIdx((i) => (i + 1) % items.length)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl"
+            >
+              ›
+            </button>
+
+            <div className="flex items-center justify-center">
+              {items[idx]?.type === "image" && (
+                <img
+                  src={items[idx].src}
+                  style={{ transform: `scale(${zoom}) rotate(${rotate}deg)` }}
+                  className="max-h-[80vh] max-w-[80vw] object-contain rounded-lg"
+                />
+              )}
+            </div>
+
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-black/40 p-3 rounded">
+              <button onClick={() => setZoom((z) => Math.max(1, z - 0.2))} className="px-3 py-1 text-white border rounded">
+                -
+              </button>
+              <div className="text-white">Zoom: {zoom.toFixed(1)}</div>
+              <button onClick={() => setZoom((z) => Math.min(3, z + 0.2))} className="px-3 py-1 text-white border rounded">
+                +
+              </button>
+
+              <button onClick={() => setRotate((r) => (r + 90) % 360)} className="px-3 py-1 text-white border rounded">
+                Rotate
+              </button>
+
+              <button onClick={() => download(items[idx].src)} className="px-3 py-1 text-white bg-blue-600 rounded">
+                Download
+              </button>
+            </div>
+          </div>
         </div>
-      </section>
-      <LOTCGallery />
+      )}
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed right-6 bottom-6 bg-[#034694] text-white p-3 rounded-full shadow-lg"
+      >
+        ↑
+      </button>
+
       <Footer />
     </div>
   );
 };
 
-export default GalleryPage;
+export default ComplexGalleryPage;
